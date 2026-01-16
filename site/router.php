@@ -70,6 +70,10 @@ class ImcRouter extends JComponentRouterBase
             $vars['format'] = 'json';
         }
 
+        if ($vars['view'] == 'api3') {
+            $vars['format'] = 'json';
+        }
+
         while (!empty($segments)) {
             $segment = array_pop($segments);
             if (is_numeric($segment)) {
